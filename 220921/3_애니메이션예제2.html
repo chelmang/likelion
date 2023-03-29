@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>공던지기</title>
+    <style>
+        div{
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            left: 100px;
+            background-color: antiquewhite;
+            border-radius: 50%;
+            border-width: 5px;
+            border-style: solid;
+            border-color: blue red green yellow;
+            animation-name: rotate;
+            animation-duration: 1.5s;
+            animation-timing-function: ease-in;
+            animation-iteration-count: infinite;
+        }
+        @keyframes rotate{
+            from{
+                transform: rotate(0deg) ;
+                margin-left: 0;
+                bottom: 300px;
+                
+            }
+            50%{
+                bottom: 350px;
+            }
+            to{
+                transform: rotate(960deg);
+                margin-left: 1000px;
+                bottom:0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

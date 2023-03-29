@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>그리드예제</title>
+    <style>
+        #container{
+            display: grid; /*grid형식으로 배치*/
+            /*grid-template-columns: 각 열들의 너비를 지정*/
+            /*grid-template-columns: 200px 200px 200px;*/
+            /*fr: 비율*/
+            grid-template-columns: repeat(3, 1fr); /*너비가 전부 같은 열 3개 만드세요, fr단위: 비율*/
+           /*줄 높이를 최소 100px로 해주세요*/
+            grid-template-rows: minmax(100px ,auto) minmax(200px, auto);
+            /*grid-gap:각 셀간의 간격을 지정(세로,가로)*/
+            grid-gap: 50px 20px;
+        }
+        .items{
+            padding: 10px;
+            background-color: antiquewhite;
+        }
+        /*홀수번째 items*/
+        .items:nth-child(odd){
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div class="items"></div>
+    <div class="items"></div>
+    <div class="items"></div>
+    <div class="items"></div>
+    <div class="items"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            width: 700px;
+            box-sizing: border-box;
+            border: 2px solid blue;
+        }
+        .box{
+            width: 80px;
+            margin:5px;
+            padding: 5px 45px;
+            color: white;
+            background-color: black;
+        }
+        #opt1{
+            flex-direction: row-reverse ;
+        }
+        #opt2{
+            flex-direction: column;
+        }
+        #opt3{
+            flex-wrap: wrap;
+        }
+        #opt4{
+            height: 400px;
+            flex-direction: row;
+        /*가운데 정렬 담당 비슷한 친구*/
+        justify-content: flex-end; /*기준축 기준 오른쪽 정렬*/
+        align-items: flex-start ; /*기준축 기준 왼쪽 정렬*/
+        justify-content: space-around; /*모든 공간에서 동일하게 나눠가짐*/
+        justify-content: space-between; /*양쪽을 붙이고 나머지 공간은 동일하게 나눠가짐(주축간격)*/
+        align-items: center; /*기준축의 반대축을 기준으로 정렬(교차축간격)*/
+        align-content: center; /*기준축의 반대 축들의 요소들의 나눠가지는 영역을 지정(교차축간격)*/
+    }
+    #opt1 >div:first-child{
+        flex: 1; /*남은 공간 전부 차지, 숫자커질수록 축소*/
+        background-color: aqua;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="container" id="opt1">
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+    </div>
+    <div class="container" id="opt2">
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+    </div>
+    <div class="container" id="opt3">
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+    </div>
+    <div class="container" id="opt4">
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+    </div>
+</body>
+</html>

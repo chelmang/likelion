@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>선형그라데이션</title>
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+            border-radius: 10px;
+        }
+        .grad1{
+            background-color: blue;
+            /*to: 목적지*/
+            /*오른쪽 아래방향으로 파란색에서 흰색으로 그라데이션 넣어주세요*/
+            background: linear-gradient(to right bottom,blue,white);
+        }
+        .grad2{
+            background-color: red;
+            /*45도(오른쪽 위) 방향으로, 빨간색에서 흰색으로 그래디언트만들어주세요*/
+            background: linear-gradient(45deg,red,white);
+        }
+        .grad3{
+            background-color: green;
+            /*위에서부터 아래방향으로 그래디언트 만드는데, 30%위치에는 하얀색으로 색상 중지점을 설정해주세요 */
+            background: linear-gradient(to bottom,green,white 30%,green);
+        }
+    </style>
+</head>
+<body>
+    <div class="grad1"></div>
+    <div class="grad2"></div>
+    <div class="grad3"></div>
+</body>
+</html>

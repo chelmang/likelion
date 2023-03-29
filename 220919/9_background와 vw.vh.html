@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /*
+        vw: viewport width(클라이언트 표시.영역 가로 크기의 백분율)전체 크기의 백분율
+        vh: viewport height(클라이언트 표시.영역 세로 크기의 백분율)전체 크기의 백분율
+        -> 현재 실행중인 스크린 크기에 맞춰 상대적 크기를 결정함
+        -> 100vh, 100vw는 전체 화면의 기준으로, 꽉 채우는 것을 의미함
+        -> 만약, 스크린크기가 height = 1000px, width = 800px라면 1vh = 10px, 1vw = 8px
+        %랑 차이점?
+        -> %는 창의 중심이 아닌 부모요소의 길이에 맞게 비율을 따짐
+        -> %는 전체 창을 기준으로하는 것이 아니기 때문에 크기 계산 당시의 부모 요소에 맞게 됨
+        -> vh,vw는 열려있는 전체 창을 기준으로 하기 때문에 스크롤을 포함해서 전체 창 길이에 맞춰 계산
+        ->vmin, vmax -> viewport의 길이 중 더 짧은 혹은 긴 길이를 기준으로 설정해줌
+        */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 10vmin;
+            height: 10vmax;
+            background-color: aqua;
+        }
+        ul{
+            list-style-type: none; /*불릿제거*/
+            margin: 30px;
+        }
+        li{
+            background-image: url(../resource/book_image.png);
+            background-size: 30px;
+            background-repeat: no-repeat;
+            background-position: left center;
+            padding-left: 40px;
+            line-height: 40px;
+        }   
+    </style>
+</head>
+<body>
+    <h1>코리아</h1>
+    <ul>
+        <li>회사소개</li>
+        <li>질문답변</li>
+        <li>자료실</li>
+        <li>문의사항</li>
+    </ul>
+</body>
+</html>

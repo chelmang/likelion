@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang = "ko">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>지원서</title>
+        <style>
+            *{
+                color:rgb(255, 101, 163);
+            }
+            .a{
+                color:#222
+            }
+        </style>
+    </head>
+    <body>
+        
+        <fieldset>
+        <h1 class="a">프론트엔드 개발자 지원서</h1>
+        HTML, CSS, 자바스크립트의 기술을 이해하고 실무 경험이 있는 분을 찾습니다.
+        <hr>
+        <form action="">
+        <p style="color:aqua;"><b>개인 정보</b></p>
+        <ul id="abc">
+            <li>
+            <label for="name">이름</label>
+            <input type="text" name="name" id="name" placeholder="공백없이 입력하세요">
+            </li>
+            <li>
+                <label for="tel">연락처</label>
+                <label><input type="tel" name="phone" id="phone"> </label>
+                </li>
+        </ul>
+        
+        <p><b>지원 분야</b></p>
+        <ul>
+            <li>
+                <label><input type="radio" name="web_radio" value="pub">웹 퍼블리싱</label>
+            </li>
+            <li>
+                <label><input type="radio" name="web_radio" value="app">웹 어플리케이션 개발</label>
+            </li>
+            <li>
+                <label><input type="radio" name="web_radio" value="env">개발 환경 개선</label>
+            </li>
+        </ul>
+        
+        <select name="select_option">
+            <option value="option1">option1</option>
+            <option value="option2">option2</option>
+        </select>
+        <!-- input을 select처럼 사용
+            input의 name: key
+            option의 value: value -->
+        선택하세요<input type="text" list="test" name="list">
+        <datalist>
+            <option value="값1">선택1</option>
+            <option value="값2">선택2</option>
+        </datalist>
+
+
+
+
+        <p><b>지원 동기</b></p>
+        <label for="area"></label>
+        <textarea name="textarea" cols="60" rows="10" placeholder="원서 지원 동기를 간략히 써 주세요."></textarea></br>
+        <input type="submit" value="접수하기">
+        <input type="reset" value="다시쓰기">
+   </form>
+        </fieldset>
+
+    </body>
+</html>

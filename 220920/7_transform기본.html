@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>트랜스폼1</title>
+    <style>
+        /*
+        transform함수
+        translate(x,y):가로방향 x, 세로방향y만큼 이동.%사용가능 -> 요소의 크기를 기준으로
+        translateX, translateY, 등 원하는 방향만 지정할 수 있는 속성도 있음
+        translate(100%, 100%) == translateX(100%) translateY(100%)
+        scale(%): %비율만큼 확대/축소. 100%가 원래 크기 기준 0%~?%까지 조정가능
+        rotate(deg): deg단위로 요소를 회전시킨다.(각도)시계방향이 기준임
+
+        무슨 사건이 발생했을 때, 위치가 변경되어야 한다거나 가운데 정렬을 해야한다
+        => transform: translate(50px, 50px);
+        그 외 자리를 지정해야 할 경우는 아래 사용
+        position: relative;
+        top:50px;
+        left: 50px;
+        위 두개는 위치 자체 모습은 같은 위치를 나타냄
+        */
+        body> div{
+            position: relative; /*원래의 나의 위치를 기준으로 이동*/
+            top:50%;
+            left:50;
+            width: 6.25rem;
+            height:6.25rem;
+            background-color: blue;
+            transition-duration: 1000ms; /* 스타일의 변경이 있을 때, 스타일의 변경을 1초동안 보여달라*/
+        }
+        body>div:hover{
+            transform:translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

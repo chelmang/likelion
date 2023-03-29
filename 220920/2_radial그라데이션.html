@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>원형그라데이션</title>
+    <style>
+        div{
+            width: 500px;
+            height: 300px;
+            border-radius: 10px;
+        }
+        .grad1{
+            /*circle: 정원*/
+            /*ellipse: 기본값, 타원*/
+            /*타원형으로, 중앙에서부터 흰색,노란색,빨간색으로 퍼져나가는 그라데이션*/
+            background: radial-gradient(circle, white, yellow, red);
+        }
+        .grad2{
+           background-color: aqua;
+           /*그라데이션 중심에서 가장 가까운 측면에 닿을 때 까지 가로 30%, 세로 40%위치에 그라데이션을 만드세요*/
+            background: radial-gradient(circle closest-side at 30% 40%,white,yellow,green);
+        }
+    </style>
+</head>
+<body>
+   <div class="grad1"></div>
+   <div class="grad2"></div>
+
+</body>
+</html>

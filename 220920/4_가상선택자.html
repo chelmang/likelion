@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>가상1</title>
+    <style>
+        div{
+            background-color: aqua;
+        }
+        div:hover{
+            background-color: antiquewhite;
+        }
+        body>lable:hover{
+            color: blue;
+        }
+        /*body 자식 태그 중, agree라는 클래스를 가지는 요소의 자식 중, input태그인데, type속성이 check박스인거 그리고 그 체크박스가 체크가 되어있을 때, 그 인접 선택자 중 warning이라는 클래스 속성을 가지는 요소에 적용해라 */
+        body > .agree>input[type=checkbox]:checked ~ .warning{
+                /*display: none과 다름*/
+            visibility: hidden; /*눈에만 안보이게 하고 공간은 여전히 차지하게 해주세요*/
+        }
+        /*body바로 밑에 div의 자식에서 a태그 중, 첫번째 자식 요소(첫번째a태그)를 선택하세요*/
+        body > div>a:first-child(3){
+            color:blueviolet;
+        }
+        /*body바로 밑에 div의 자식에서 a태그 중, 세번째 자식 요소(두번째 a태그->br태그도 포함해야해서)를 선택하세요*/
+        body > div>a:nth-child(3){
+            color:orange;
+        }
+        body > div>a:last-child{
+            color:red;
+        }
+        /*odd:  홀수번째 전부 선택
+          even: 짝수번째 전부 선택*/
+        body > div>a:nth-child(odd){
+            color:blue;
+        }
+        /*밑에 우선 적용*/
+        /*div 자식 중, 홀수 번째 요소 중에서 첫번째와 마지막 요소를 제외한 요소에 적용시켜주세요*/
+        body>div>a:nth-child(odd):not(:first-child):not(last-child):hover{
+                font-size: 50px;
+                text-decoration: dashed;
+        }
+    </style>
+</head>
+<body>
+    <lable class="agree">
+        <input type="checkbox">
+        <span>위 약관을 읽어보았고 동의합니다</span><br/>
+        <span class="warning">위 약관을 읽고 동의해주세요</span>
+    </lable>
+    <div>
+    <a>HELLO</a><br/>
+    <a>HELLO</a><br/>
+    <a>HELLO</a><br/>
+    <a>HELLO</a><br/>
+    <a>HELLO</a><br/>
+    <a>HELLO</a><br/>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang = "ko">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>css2</title>
+        <style>
+            span{
+                color:red;
+            }
+            /*후손 선택자:{부모 선택자} {자식 선택자} -> 부모 안에 있는 자식을 전부 선택함*/
+            body span{
+                font-style:italic;
+            }
+            /*자식 선택자: {부모 선택자} > {자식 선택자} -> 부모 요소 바로 아래에 있는 자식요소를 선택*/
+            body>span> .test >span{
+                color:aquamarine;
+            }
+            #five{
+                color: yellow;
+            }
+            body > div  span{
+                color:blue;
+            }
+            .f{
+                color :brown;
+            }
+            test123{
+                color:aqua;
+            }
+            /*기본적으로는 하위 요소가 우선이나 더 정확한 정보나 중요표시가 있는 것부터 적용된다*/
+            test123 , div{
+                color: blueviolet!important;
+            }
+        </style>
+    </head>
+    <body>
+        <span>ONE</span>
+        <span>ONE BY ONE</span>
+        <div>
+            <span>TWO</span>
+        <div>
+            <test123>TEST</test123>
+            <span>Three</span>
+            <span class ="f">Four</span>
+            <span>id = "five" >Five</span>
+        </div>
+        
+    </div>
+    </body>
+</html>

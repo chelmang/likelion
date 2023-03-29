@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+@font-face {
+    /*font-family: ;
+    src: url();*/
+}
+/*:root는 최상위를 뜻함. 현재 문서*/
+/*페이지에서 계속 사용할 변수(상수값) 설정*/
+:root{
+    --text-bright-color:#fff; /*텍스트 밝게*/
+    --accent-color: #c535f5; /*강조색*/
+}
+
+/*기본설정: 페이지 전체*/
+body{
+    /*font-family: ;*/
+    margin: 0;
+   
+}
+
+.conA{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url(resource/logo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh; /*이미지가 화면을 꽉 채우도록(메인 화면이)*/
+    min-height: 450px;
+    color: #fff;
+    color: var(--text-bright-color);
+}   
+/*메인 Title 부분*/
+.conA h1{
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size:8vw; /*총 브라우저 가로길이 / 100*15크기 */
+    letter-spacing: 0.2em; /*글자 간격 늘리기 약 23px*/
+    margin-left: 0.2rem; /*왼쪽 여백 넣어서 맞추기*/
+    
+}
+/*서브 title 부분*/
+.conA p{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 18px;
+
+}
+/*메인 로고 아이콘*/
+.conA img{
+    width: 15%;
+}
+/*메인화면버튼*/
+.conA a {
+    display: inline-block;
+    color: #fff; /*변수를 지원하지  않는 브라우저를 위해*/
+    color: var(--text-bright-color);
+    margin-top: 20px;
+    padding: 10px 30px;
+    border: 3px solid currentColor; /*currentColor: 현재 내 색깔*/
+    border-radius: 8px;
+    background-color: #c535f5;
+    background-color: var(--accent-color);
+    font-size: 14px;
+    text-decoration: none;
+}
+
+/*반응형 웹 설정(스마트폰, 태블릿)*/
+/*768px -> ipad 화면 너비 기준 폰트 크기 고정*/
+@media(min-width:768px){
+    .conA h1{
+        font-size: 115px;
+    }
+    .conA p{
+        font-size: 24px;
+    }
+}
