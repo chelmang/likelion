@@ -1,16 +1,10 @@
-html {
-    height: 100vh;
-}
-
 body {
     background-color: black;
-    height: 100%;
-    width: 100%;
 }
 
 #wrapper{
     width: 100%;
-    height: 500px;
+    height:100vh;
     display: flex;
     justify-content: space-around;
 }
@@ -35,7 +29,9 @@ body {
     width: 150px;
     height:150px;
     background-color: white;
-    flex-basis: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 3%;
 }
 
@@ -78,7 +74,7 @@ body {
     width: 220px;
 }
 
-.b{
+.btn{
     display: block;
     margin: auto;
     align-items: center;
@@ -89,7 +85,7 @@ body {
     width: 150px;
 }
 
-#i-d{
+#input-id{
     background-size: 15px;
     background-repeat: no-repeat;
     background-position: left center;
@@ -97,12 +93,13 @@ body {
     line-height: 40px;
 }
 
-#p-w{
+#input-pw{
     background-size: 15px;
     background-repeat: no-repeat;
     background-position: left center;
     padding-left: 20px;
     line-height: 40px;
 }
+
 
 
