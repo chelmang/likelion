@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            /*상수값 만들
+            title-horizontal-space는 변수명으로 자기 마음대로...
+            */
+        }
+        /*
+        filter
+        -blur(a): a는 길이, a만큼 흐리게 한다.작을수록 덜 흐려진다
+        -brightness(a): a는 비율, 100%를 기준으로 이미지를 어둡게, 혹은 밝게 한다(0%: 완전 어둡게 ~?% 매우 밝게)(명도)
+        -contrast(a):a는 비율, 100%를 기준으로 이미지 대비를 조절한다(색의 진하기 정도)(대비)
+        -grayscale(a):a는 비율. 0% (기본값)부터 100%까지, 이미지의 그레이스케일을 조절(0%는 풀컬러, 100%는 흑백)
+        -invert(a): a는 비율. 0%(기본값)부터 100%까지 . 이미지를 색을 반전 시킨다(반전)
+        */
+        a.button{
+            display: block;
+            /*중앙정렬*/
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 30rem;
+            height: 20rem;
+            border: 1px solid black;
+            color: aqua;
+            transform: translate(-50%, -50%);
+            overflow: hidden;
+        }
+        .button > .background{
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            filter: brightness(75%);
+            background-image: url(../resource/apple.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: 0;
+            transition-duration: 400ms;
+        }
+        button:hover>.background{
+            transform: scale(110%);
+        }
+        .button>.content{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 99;
+        }
+        .button>.content>.title{
+            left: 0;
+            width: 100%;
+            font-size: 1.75em;
+            background-color: blue;
+            padding: 1.2rem;
+            box-sizing: border-box;
+            margin-block-start: 0;
+            margin-block-end: 0;
+            padding: 1.25rem var(--title-horizontal-space );
+        }
+        .button>.content>.title>.arrow{
+            position: absolute;
+            top: 50%;
+            right: var(--title-horizontal-space);
+            width: 2rem;
+            height:2rem;
+            background-color: black;
+            border-radius: 50%;
+            background-image: url(../resource/arrow.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            transform: translate(clac(-50%+1rem));
+            transition-duration: 0.5s;
+            opacity: 0;
+        }
+        .button:hover>.content>.title>.arrow{
+            transform: translateY(-50%);
+        }
+        .content{
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            z-index: 1;
+        }
+        .button>.content>.exp{
+            display: block;
+            position:absolute;
+            bottom: 0;
+            line-height: 150%;
+            background-color: rgb(0,0,0,0.5);
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding: 2rem var(--title-horizontal-space);
+            text-align: justify; /*텍스트를 양쪽 끝 맞추세요*/
+            opacity: 0;
+            transform: translateY(1rem);
+            transition-duration: 0.5s;
+        }
+        .button:hover>.content>.exp{
+            transform: translateY(0);
+            opacity: 1;
+        }
+    </style>
+
+</head>
+<body>
+    <a class="button" href="#">
+        <span class="background"></span>
+        <span class="content">
+            <h2 class="title">
+                <span>입점레스토랑 안내</span>
+                <span class="arrow"></span>
+            </h2>
+            <span class="exp">동대구 매리어트에 입점해 있는 레스토랑에서 즐거운 시간 보내세요</span>
+        </span>
+    </a>
+</body>
+</html>

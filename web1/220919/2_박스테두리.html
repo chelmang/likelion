@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>border</title>
+    <style>
+        .box1{
+                background-color:bisque;
+                /*border: 1px solid rgb(108,74,74);*/
+                border-style: solid;
+                border-width: 5px;
+                border-color: blue;
+                box-sizing: border-box; /*자동설정*/
+                padding: 5px; /*글자 옆 공간*/
+                width: 30px;
+                height: 30px;
+        }
+        .box2{
+                background-color: aquamarine;
+                width: 50px;
+                height: 50px;
+                border-style: dashed;
+        }
+        */*모든*/{
+            margin:0px;
+            padding:0px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">박스1</div>
+    <div class="box2">박스2</div>
+</body>
+</html>

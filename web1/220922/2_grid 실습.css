@@ -1,0 +1,33 @@
+body{
+    background-color: black;
+    font-size: 16px;
+}
+
+
+#wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.card{
+    background-color: #fff;
+    box-shadow: 5px 10px 25px #fff;
+    text-align: center;
+}
+
+.card>header {
+    font-size: 2rem;
+    padding: 0.5rem;
+}
+
+.card >p {
+    line-height: 1.6em;
+}
+
+img{
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    min-height: 30rem;
+}

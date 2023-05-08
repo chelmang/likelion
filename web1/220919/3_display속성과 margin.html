@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>margin-padding</title>
+    <style>
+        .button{
+            /*height:마진값으로 알아서 크기를 조정하도록 하는 것이 좋다
+                    사용자가 명시적으로 할때는 꼭 해야될 때만*/
+            width:10rem;
+            background-color: blueviolet;
+            border-radius: 50%;
+            padding: 0.5rem;
+            margin: 0.0825rem;
+            /*테두리 둥글게*/
+            /*border-radius:50% 25%*/
+            text-align: center;
+            display: inline;
+            /*display: none -> 보이지도 않고 자리차지도 하지 않음
+            inline: 줄을 다 차지하지 않고 필요한 공간 만큼만 차지 *width,height,margin,padding 값 등이 무시된다
+            inline-block: 줄을 다 차지하지 않으면서 크기 조정 가능 *width,height,margin,padding 값 사용가능
+            block: 부모 요소의 가로 크기 전부를 전부 차지함(한줄 전부) */
+        }
+    </style>
+</head>
+<body>
+    <div class="botton">로그인</div>
+    <div class="botton">회원가입</div>
+</body>
+</html>
